@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+:root{
+    --font1: 'Comfortaa', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font1);
+    color: #1e1e2a;
+}
+
+/*Header*/
+
+.header-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(158, 253, 33, 0.492);
+    background-image: url('./images/foto.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 112px;
+    position: relative;
+}
+h1, h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+ .social-media{
+     margin: 1rem;
+     display: flex;
+ }
+ .social-media a{
+     text-decoration: none;
+     color: #1e1e2a;
+     padding: 1rem 5rem;
+     border: 1px solid #1e1e2a;
+     min-width: 4rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all ease 0.7s;
+     border-radius: 5px;
+     margin-right: 10px;
+ }
+ a:hover{
+     background-color: #fff;
+ }
+
+ /*Menu drop*/
+ .checkbox-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .checkbox{
+     width: 100px;
+     height: 100px;
+     position: absolute;
+     right: 0;
+     top: 0;
+     display: flex;
+     justify-content: center;
+     cursor: pointer;
+     z-index: 9999;
+     transition: 400ms ease-in-out 0s;
+ }
+ .checkbox .trace{
+     width: 50px;
+     height: 2px;
+     background-color: #1e1e2a;
+     position: absolute;
+     border-radius: 4px;
+     transition: 0.5s ease-in-out;
+ }
+
+ .checkbox .trace:nth-child(1){
+     top: 26px;
+     transform: rotate(0);
+ }
+ .checkbox .trace:nth-child(2){
+    top: 46px;
+    transform: rotate(0);
+}
+.checkbox .trace:nth-child(3){
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle{
+    display: none;
+}
+
+/*Menu*/
+
+.menu{
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #fff;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+.menu-itens{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens ul{
+    list-style-type: none;
+}
+.menu-itens ul li a{
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+/*Animação menu*/
+
+#toggle:checked+ .checkbox .trace:nth-child(1){
+    transform: rotate(45deg);
+    top: 47px;
+}
+#toggle:checked+ .checkbox .trace:nth-child(2){
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+#toggle:checked+ .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#toggle:checked + .checkbox{
+    background-color: rgb(3, 104, 255);
+}
+#toggle:checked ~ .menu{
+    box-shadow: 0px 0px 0px 100vmax rgb(3, 104, 255);
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-itens{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*Cards*/
+
+.container{
+   height: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   margin: 3rem 0; 
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+.card{ 
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #60e1e0;
+    background-image: url('/images/foto.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.5);
+    color: #1e1e2a;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.card-text{
+    width: 40%;
+    letter-spacing: 1px;
+    color:rgba(109,109,109);
+}
+.card-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.card-wrapper::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+
+.card-wrapper h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+.card-wrapper p{
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    filter: unset;
+}
+.card:hover > .card-wrapper::before{
+    height: 250px;
+    width: 250px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p{
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+/*Footer*/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #60e1e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e1e2a;
+}
+.link{
+    text-decoration: none;
+    color: #1e1e2a;
+}
+.link:hover{
+    color: black;
+    background-color: transparent;
+}
+
+@media (max-width: 790px){
+    h1, h2{
+        font-size: 30px;
+    }
+    .social-media{
+        margin: 0;
+    }
+    .social-media a{
+        padding: 1rem 01rem;
+        border: 1px solid #1e1e2a;
+        min-width: 4rem;
+    }
+    .card{ 
+        width: 150px;
+        height: 150px;
+    }
+    .card-wrapper h2{
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+}
