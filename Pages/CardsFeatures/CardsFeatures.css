@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background: #f6f9ff;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #434343;
+}
+
+section.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 256px;
+    margin-left: 32px;
+}
+
+section.card:first-child{
+    margin-left: 0;
+}
+
+.cards{
+    display: flex;
+    padding: 32px;
+}
+
+.icon{
+    width: 64px;
+    height: 64px;
+}
+
+section.card img{
+    width: 100%;
+}
+
+section.card h3{
+    margin: 16px 0;
+    font-size: 100%;
+}
+
+section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+span a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+section.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(to right, rgb(3, 104, 255), rgb(166, 202, 255));
+    opacity: 1;
+    transition: 0.9s;
+}
+
+section.card button:hover{
+    opacity: 0.9;
+    width: 51%;
+}
+
+section.card.contact{
+    box-shadow: 20px 20px 50px -30px rgb(3, 104, 255);
+}
+
+section.card.shop{
+    box-shadow: 20px 20px 50px -30px rgb(3, 104, 255);
+}
+
+section.card.about{
+    box-shadow: 20px 20px 50px -30px rgb(3, 104, 255);
+}
+
+@media screen and (max-width: 720px) {
+    main.cards{
+        flex-direction: column;
+    }
+    section.card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+    section.card:last-child{
+        margin-bottom: 0;
+    }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(3, 104, 255);
+}
+.link{
+    text-decoration: none;
+    color: rgb(3, 104, 255);;
+    transition:  0.3s all;
+    font-weight: 500;
+}
+.link:hover{
+    color: black;
+    background-color: transparent;
+}
