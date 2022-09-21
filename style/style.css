@@ -224,15 +224,15 @@ h1, h2{
 }
 #p1{
     background-image: url('/images/AD12-logo02-black.png');
-    color: var(--color1);
 }
 #p2{
     background-image: url('/images/WH-black.png');
 }
 #p3{
     background-image: url('/images/WH-Music-logo.png');
-    color: gray;
-
+}
+#p4{
+    background-image: url('/images/galeria.png');
 }
 
 .lkn {
