@@ -2,8 +2,9 @@
 
 :root{
     --font1: 'Comfortaa', cursive;
-    --color1: rgb(3, 104, 255);
+    --color1: #590195;
     --color2: #FFF126;
+    --color3: #8E0BE6;
 }
 
 body{
@@ -77,10 +78,11 @@ h1, h2{
      cursor: pointer;
      z-index: 9999;
      transition: 400ms ease-in-out 0s;
+     border-radius: 0px 0 0 20px;
  }
  .checkbox .trace{
      width: 50px;
-     height: 2px;
+     height: 10px;
      background-color: #f1f1f1;
      position: absolute;
      border-radius: 4px;
@@ -102,6 +104,18 @@ h1, h2{
 
 #toggle{
     display: none;
+}
+
+@media (max-width: 800px){
+    .checkbox{
+        width: 70px;
+        height: 70px;
+    }
+    .checkbox .trace{
+    width: 40px;
+    height: 5px;
+    margin-top: -12px;
+    }
 }
 
 /*Menu*/
@@ -209,7 +223,7 @@ h1, h2{
     height: 300px;
     border-radius: 100%;
     box-shadow: 2px 2px 5px black;
-    margin: 3rem 0 0 0;
+    margin: 3rem 0 0 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,7 +251,17 @@ h1, h2{
 
 .lkn {
     text-decoration: none;
-    color: var(--color1);
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--color1);
+    padding: 10px;
+    margin-right: 150px;
+    border-radius: 50px;
+    opacity: 1;
+    transition: 0.5s all;
+}
+.lkn:hover{
+    opacity: 0.8;
 }
 .card-text{
     width: 40%;
@@ -260,9 +284,22 @@ h1, h2{
     font-size: 14px;
 }
 
+@media (max-width: 800px){
+    .card{
+        margin: 2rem 0 0 4rem;
+    }
+    .card-text{
+        margin-left: 3rem;
+        margin-bottom: 3rem;
+    }
+    .lkn{
+        margin-left: 14rem;
+    }
+}
+
 /*Contato*/
 .contact{
-    background-color:#000;
+    background-color:var(--color3);
     width: 100%;
     height: 230px;
     text-align: center;
@@ -317,7 +354,7 @@ footer{
 }
 
 
-@media (max-width: 790px){
+@media (max-width: 800px){
     h1, h2{
         font-size: 30px;
     }
