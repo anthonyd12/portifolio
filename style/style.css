@@ -67,8 +67,8 @@ h1, h2{
      width: 100px;
      height: 100px;
      position: fixed;
-
-     background-image: linear-gradient(to top, #6c00ff, #3e0095);     right: 0;
+     background-color: #f1f1f1;
+     right: 0;
      top: 0;
      display: flex;
      justify-content: center;
@@ -80,7 +80,7 @@ h1, h2{
  .checkbox .trace{
      width: 50px;
      height: 10px;
-     background-color: #f1f1f1;
+     background-image: linear-gradient(to top, #6c00ff, #3e0095);     
      position: absolute;
      border-radius: 4px;
      transition: 0.5s ease-in-out;
@@ -224,7 +224,6 @@ h1, h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffff;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -232,21 +231,10 @@ h1, h2{
     color: black;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    opacity: 1;
 }
-#p1{
-    background-image: url('/images/Logo.png') !important;
-}
-#p2{
-    background-image: url('/images/WH-black.png') !important;
-}
-#p3{
-    background-image: url('/images/WH-Music-logo.png') !important;
-}
-#p4{
-    background-image: url('/images/galeria.png') !important;
-}
-#p5{
-    background-image: url('/images/behance.png') !important;
+.card:hover{
+    opacity: 0.9;
 }
 
 .lkn {
