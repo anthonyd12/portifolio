@@ -2,6 +2,8 @@ let homePag = document.getElementById('inicio');
 let projetosPag = document.querySelector("#projetos");
 let orcamentoPag = document.getElementById('contato');
 
+let cheackBox = document.querySelector('.close');
+
 
 
 function scroll() {
@@ -15,3 +17,5 @@ function scroll() {
 inicioPag.addEventListener(`click`);
 projetosPag.addEventListener(`click`);
 contatoPag.addEventListener(`click`);
+
+
