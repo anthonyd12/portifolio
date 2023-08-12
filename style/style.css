@@ -223,7 +223,6 @@ h1, h2{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
     flex-direction: column;
 }
 
@@ -300,6 +299,9 @@ h1, h2{
         border-radius: 30px;
         box-shadow: 2px 2px 1px #919191;
     }
+    .container{
+        margin-left: 0;
+    }
     main{
         display: flex;
         flex-direction: column;
@@ -328,7 +330,7 @@ h1, h2{
     }
     .card-text{
         background-color: #ebebeb;
-        width: 90vw;        
+        width: 80vw;        
         border-radius: 40px;
         height: 20vw;
         margin-top: -10.4vh;
@@ -337,9 +339,9 @@ h1, h2{
     }
     .card-text p{
         font-size: 0.8em;
-        width: 225px;
-        padding: 10px;
-        margin-left: 20vw;
+        width: 230vw;
+        padding: 20px 10px 10px 10px;
+        margin-left: 10vw;
         width: 70%;
         justify-content: center;
     }
@@ -415,6 +417,7 @@ footer{
         align-items: center;
         justify-content: center;
         height: 30vh;
+        margin-top: 0;
     }
     .contact h1{
         font-size: 7vw;
